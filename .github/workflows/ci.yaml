@@ -1,8 +1,5 @@
 name: CI
-on:
-  push:
-    branches:
-      - master
+on: [pull_request]
 
 jobs:
   sonarcloud:
@@ -26,6 +23,6 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - name: Build and Analyze
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=LeonCarraro_realmeet-api
