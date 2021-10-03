@@ -1,9 +1,9 @@
-CREATE TABLE TB_ROOM (
-    ID      BIGINT          NOT NULL AUTO_INCREMENT,
-    NAME    VARCHAR (50)    NOT NULL,
-    SEATS   INT             NOT NULL,
-    STATUS  TINYINT         NOT NULL,
+CREATE TABLE `TB_ROOM` (
+    `ID`      BIGINT          NOT NULL AUTO_INCREMENT,
+    `NAME`    VARCHAR (50)    NOT NULL,
+    `SEATS`   INT             NOT NULL,
+    `STATUS`  TINYINT         NOT NULL,
 
-    PRIMARY KEY (ID)
+    PRIMARY KEY (`ID`)
 )   ENGINE=InnoDB
     DEFAULT CHARSET=utf8mb4;
