@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  dev_db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - dev_db:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+volumes:
+  dev_db:
